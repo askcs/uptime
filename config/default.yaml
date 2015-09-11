@@ -26,7 +26,9 @@ plugins:
   - ./plugins/patternMatcher
   - ./plugins/httpOptions
   # - ./plugins/email
-  # - ./plugins/basicAuth
+  #- ./plugins/basicAuth
+  #- ./plugins/slack
+  #- ./plugins/docker
 
 email:
   method:      SMTP  # possible methods are SMTP, SES, or Sendmail
@@ -44,6 +46,17 @@ email:
     from:            # The message sender, e.g. 'Fred Foo <foo@blurdybloop.com>'
     to:              # The message recipient, e.g. 'bar@blurdybloop.com, baz@blurdybloop.com'
   # The email plugin also uses the main `url` param for hyperlinks in the sent emails
+
+askfast:
+  accountId: 1
+  key: 2
+
+slack:
+  apiToken: api-token
+  options:
+    channel: general
+    username: Uptime
+
 
 basicAuth:
   username:    admin
