@@ -19,7 +19,7 @@ exports.initWebApp = function(options) {
             var container = docker.getContainer('askbackend');
             if(container) {
               container.restart(function (err, data) {
-                if(err) console.err("Failed to restart container: ",err);
+                if(err) console.error("Failed to restart container: ",err);
                 else console.log(data);
               });
             }

@@ -1,9 +1,11 @@
 {
-  "name":    "node-uptime",
+  "name": "node-uptime",
   "description": "Remote monitoring for HTTP applications",
   "version": "3.2.0",
   "author": "Francois Zaninotto",
   "dependencies": {
+    "ask-cm": "^1.0.1",
+    "askfast": "^0.3.0",
     "async": "0.1.22",
     "config": "0.4.32",
     "connect-flash": "0.1.0",

@@ -11,7 +11,7 @@ exports.initWebApp = function(options) {
   var params = JSON.parse(JSON.stringify(config.options)); //deepCopy
 
   CheckEvent.on('afterInsert', function(checkEvent) {
-    if(checkEvent.tags.indexOf("slack") > -1) {
+    if(config.needsTag === false || checkEvent.tags.indexOf("slack") > -1) {
       checkEvent.findCheck(function (err, check) {
         if (err) return console.error(err);
 

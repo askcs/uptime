@@ -29,6 +29,7 @@ plugins:
   #- ./plugins/basicAuth
   #- ./plugins/slack
   #- ./plugins/docker
+  #- ./plugins/sms
 
 email:
   method:      SMTP  # possible methods are SMTP, SES, or Sendmail
@@ -57,6 +58,11 @@ slack:
     channel: general
     username: Uptime
 
+sms:
+  userId:   # CM UserId
+  username: # CM Username
+  password: # CM password
+  numbers:  # array of phone numbers
 
 basicAuth:
   username:    admin
