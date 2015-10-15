@@ -64,6 +64,21 @@ sms:
   password: # CM password
   numbers:  # array of phone numbers
 
+aws:
+  params:
+    ImageId:      # AMI Image Id
+    InstanceType: # Instance type (e.g. t2.micro)
+    KeyName:      # Name of the ssh key
+    SecurityGroupIds:
+      - 'id'      # Security group id
+    IamInstanceProfile:
+      Name:       # Name of the IAM profile
+    SubnetId:     # Subnet Id where to launch the new instance
+  tags:            # add tags
+    - Key: 'Name'  # Key of the tag
+      Value: 'Example'  # Value of the tag
+  eip:             # Elastic IP Id
+
 basicAuth:
   username:    admin
   password:    password

@@ -23,6 +23,9 @@ exports.initWebApp = function(options) {
               message += 'is now up';
             }
             break;
+          default:
+            message += checkEvent.message;
+            break;
         }
 
         var numbers = config.numbers;
