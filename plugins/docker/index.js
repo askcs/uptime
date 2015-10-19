@@ -45,7 +45,7 @@ function collectIPAddresses(tag, callback) {
       {
         Name: 'tag-key',
         Values: [
-          'Name',
+          'monitor',
         ]
       },
       {

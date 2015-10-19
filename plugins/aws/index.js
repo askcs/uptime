@@ -40,6 +40,19 @@ function createNewInstance(config) {
   config.params.MaxCount = 1;
   config.params.MinCount = 1;
 
+  if(config.params.InstanceType.indexOf("c3") == 0) {
+    config.params.BlockDeviceMappings = [
+      {
+        VirtualName: "ephemeral0",
+        DeviceName: "/dev/xvdb"
+      },
+      {
+        VirtualName: "ephemeral1",
+        DeviceName: "/dev/xvdc"
+      }
+    ]
+  }
+
   ec2.runInstances(config.params, function(err, data) {
     if (err) {
       console.log("Could not create instance", err);
